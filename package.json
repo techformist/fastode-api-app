@@ -1,0 +1,35 @@
+{
+  "name": "fastode-api-app",
+  "version": "0.1.0",
+  "description": "Fastode api server boilerplate.",
+  "main": "server.js",
+  "scripts": {
+    "dev": "nodemon server.js",
+    "serve": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/techformist/fastode-api-app.git"
+  },
+  "keywords": [
+    "fastode",
+    "fastode-api-app",
+    "fastify",
+    "nodejs",
+    "webapi"
+  ],
+  "author": "Prashanth Krishnamurthy",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/techformist/fastode-api-app/issues"
+  },
+  "homepage": "https://github.com/techformist/fastode-api-app#readme",
+  "dependencies": {
+    "fastode": "^0.0.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2",
+    "tap": "^12.5.3"
+  }
+}
