@@ -91,6 +91,14 @@ module.exports = function(fastify, opts, next) {
   });
 
   /*
+  | Access URL data (incl. queries)
+  */
+
+  fastify.register(require("fastify-url-data"), err => {
+    if (err) fastify.log.error(err);
+  });
+
+  /*
   | Call next at the last
   */
   next();
