@@ -1,5 +1,8 @@
-module.exports = function() {
-  return {
+module.exports = {
+  properties: {
+    // TODO: many are for future use
+    // filter this.
+    //
     /*
     |
     | ORIGIN
@@ -16,7 +19,7 @@ module.exports = function() {
     | 
     | Can also be a regular expression or a function. Refer https://github.com/expressjs/cors.
     */
-    origin: true,
+    origin: { type: "boolean", default: true },
 
     /*
     |
@@ -26,7 +29,10 @@ module.exports = function() {
     | The value can be a comma separated string or array.
     |
     */
-    methods: ["GET", "PUT", "PATCH", "POST", "DELETE"],
+    methods: {
+      type: "array",
+      default: ["GET", "PUT", "PATCH", "POST", "DELETE"]
+    },
 
     /*
     |
@@ -38,7 +44,7 @@ module.exports = function() {
     | the request's Access-Control-Request-Headers header.
     |
     */
-    //allowedHeaders: ['Content-Type', 'Authorization'],
+    //allowedHeaders: {type: "array", default: ['Content-Type', 'Authorization']},
 
     /*
     |
@@ -50,7 +56,7 @@ module.exports = function() {
     | the request's Access-Control-Request-Headers header.
     |
     */
-    // exposedHeaders: ['Content-Range', 'X-Content-Range'],
+    // exposedHeaders: {type: "array", default:['Content-Range', 'X-Content-Range']},
 
     /*
     |
@@ -59,7 +65,7 @@ module.exports = function() {
     | Define Access-Control-Allow-Credentials header. Specify Boolean value.
     |
     */
-    // credentials: false,
+    // credentials: {type: "boolean", default:false},
 
     /*
     |
@@ -69,7 +75,7 @@ module.exports = function() {
     | Set to an integer to pass the header, otherwise it is omitted
     |
     */
-    maxAge: 90,
+    maxAge: { type: "number", default: 90 },
 
     /*
     | PREFLIGHT DISABLE
@@ -77,6 +83,6 @@ module.exports = function() {
     | Disable preflight checks.
     |
     */
-    preflight: true
-  };
+    preflight: { type: "boolean", default: true }
+  }
 };
